@@ -7,23 +7,18 @@
 	ViewBag.Title = "Upload Files";
 }
 
+
 <h2 class="mb-3">Uploaded Files</h2>
 
-<!-- Search and Filter -->
-<form method="get" class="form-inline mb-3">
-	<input type="text" name="searchTerm" placeholder="Search by name or email" class="form-control mr-2" value="@Request.QueryString["searchTerm"]" />
-	<br />
-	<select name="fileType" class="form-control mr-2">
-		<option value="">All File Types</option>
-		<option value="Image">Image</option>
-		<option value="PDF">PDF</option>
-		<option value="Audio">Audio</option>
-		<option value="Video">Video</option>
-		<option value="Text">Text</option>
-	</select>
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+	<div class="form-group">
+		<input type="text" name="search" class="form-control" placeholder="Search by file name or type" value="@Request["search"]" />
+	</div>
 	<br />
 	<button type="submit" class="btn btn-primary">Search</button>
-</form>
+}
+
 <br />
 <!-- Files Table -->
 <table class="table table-bordered table-striped">
@@ -31,8 +26,6 @@
 		<tr>
 			<th>File Name</th>
 			<th>Type</th>
-			<th>Uploaded By</th>
-			<th>Email</th>
 			<th>Uploaded On</th>
 			<th></th>
 		</tr>
@@ -44,12 +37,11 @@
 			{
 				<tr>
 					<td>@file.FileName</td>
-					<td>@file.FileType</td>
-					<td>@file.fName @file.lName</td>
-					<td>@file.Email</td>
-					<td>@file.UploadDate.ToString("g")</td>
+					<td>@file.FileType @file.ImageMimeType @file.MimeType</td>
+					@*<td>@file.FileData</td>*@
+					<td>@file.UploadDate</td>
 					<td>
-						<a href="@Url.Action("Download", "File", new { id = file.Id })" class="btn btn-sm btn-success">Download</a>
+						@*<a href="@Url.Action("Download", "File", new { id = file.Id })" class="btn btn-sm btn-success">Download</a>*@
 					</td>
 				</tr>
 			}

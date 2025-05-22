@@ -1,0 +1,43 @@
+﻿@using AppDomain.Entities
+@model UploadFile
+
+
+<h2>Upload New File</h2>
+
+@using (Html.BeginForm("Upload", "File", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+	@Html.AntiForgeryToken()
+
+	<div class="form-horizontal">
+		<hr />
+		@Html.ValidationSummary(true)
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.fName, new { @class = "control-label" })
+			@Html.TextBoxFor(m => m.fName, new { @class = "form-control" })
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.lName, new { @class = "control-label" })
+			@Html.TextBoxFor(m => m.lName, new { @class = "form-control" })
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Email, new { @class = "control-label" })
+			@Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Phone, new { @class = "control-label" })
+			@Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+		</div>
+
+		<div class="form-group">
+			<label for="fileUpload">Choose File</label>
+			<input type="file" name="file" class="form-control" />
+		</div>
+
+		<button type="submit" class="btn btn-primary">Upload</button>
+		<a href="@Url.Action("Admin")" class="btn btn-secondary">Back</a>
+	</div>
+}

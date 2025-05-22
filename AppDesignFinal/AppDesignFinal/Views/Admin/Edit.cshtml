@@ -1,0 +1,29 @@
+﻿@using AppDomain.Entities
+@model UploadFile
+
+<h2>Edit File</h2>
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+
+	@Html.HiddenFor(m => m.Id)
+
+	<div class="form-group">
+		@Html.LabelFor(m => m.FileName)
+		@Html.TextBoxFor(m => m.FileName, new { @class = "form-control" })
+	</div>
+	<br />
+	<div class="form-group">
+		<label for="fileUpload">Choose File</label>
+		<input type="file" name="file" class="form-control" />
+	</div>
+	<br />
+	<div class="form-group">
+		<label for="fileType">File Type</label>
+		<input type="text" name="FileType" class="form-control" />
+	</div>
+	<br />
+	<button type="submit" class="btn btn-warning">Save Changes</button>
+	<a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+}

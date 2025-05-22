@@ -1,0 +1,28 @@
+﻿@using AppDomain.Entities
+@model UploadFile
+
+<h2>File Details</h2>
+
+<table class="table">
+	<tr>
+		<th>File Name</th>
+		<td>@Model.FileName</td>
+	</tr>
+	<tr>
+		<th>Type</th>
+		<td>@Model.FileType @Model.MimeType @Model.ImageMimeType</td>
+	</tr>
+	<tr>
+		<th>File Data</th>
+		<td>@Model.FileData</td>
+	</tr>
+	<tr>
+		<th>Date</th>
+		<td>@Model.UploadDate</td>
+	</tr>
+</table>
+
+<p>
+	@*<a href="@Url.Action("Download", "File", new { id = Model.Id })" class="btn btn-success">Download</a>*@
+	<a href="@Url.Action("Index")" class="btn btn-secondary">Back</a>
+</p>

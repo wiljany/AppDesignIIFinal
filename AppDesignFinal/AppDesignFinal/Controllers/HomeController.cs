@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppDomain.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,20 @@ namespace AppDesignFinal.Controllers
 {
 	public class HomeController : Controller
 	{
-		public ActionResult Index()
+		private ApplicationDbContext db = new ApplicationDbContext();
+
+		public ActionResult Index(string search)
 		{
-			return View();
+			var files = db.UploadFiles.AsQueryable();
+
+			if (!string.IsNullOrEmpty(search))
+			{
+				files = files.Where(f =>
+					f.FileName.Contains(search) ||
+					f.FileType.Contains(search));
+			}
+
+			return View(files.ToList());
 		}
 
 	}

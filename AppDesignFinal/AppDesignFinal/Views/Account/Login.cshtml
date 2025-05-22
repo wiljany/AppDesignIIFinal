@@ -1,0 +1,23 @@
+﻿@model AppDesignFinal.Models.LoginViewModel
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+	<div class="form-group">
+		@Html.LabelFor(m => m.Email)
+		@Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+		@Html.ValidationMessageFor(m => m.Email)
+	</div>
+	<br />
+	<div class="form-group">
+		@Html.LabelFor(m => m.Password)
+		@Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+		@Html.ValidationMessageFor(m => m.Password)
+	</div>
+	<br />
+	<button type="submit" class="btn btn-primary">Login</button>
+}

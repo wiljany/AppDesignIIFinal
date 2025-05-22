@@ -210,6 +210,8 @@ C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesign
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\Antlr3.Runtime.dll
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\AppDomain.dll
+C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\EntityFramework.dll
+C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\EntityFramework.SqlServer.dll
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\Moq.dll
@@ -228,6 +230,8 @@ C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesign
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\WebGrease.dll
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\AppDomain.pdb
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\AppDomain.dll.config
+C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\EntityFramework.xml
+C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\EntityFramework.SqlServer.xml
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\Moq.xml
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\Ninject.pdb
 C:\Users\wiljany\source\repos\AppFinal\AppDesignIIFinal\AppDesignFinal\AppDesignFinal\bin\Ninject.xml
